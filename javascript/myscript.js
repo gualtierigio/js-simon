@@ -27,11 +27,18 @@ let numbersToGuess = getCasualArray(5)
 alert(numbersToGuess);
 
 setTimeout(function(){
-    alert("ciao")
-    //*chiedere 5 volte il numero all utente
-    //  * per ogni numero controlla se presente tra i numeri casuali (array numbersToGuess)
-    //  * se contenuto aggiungiamo ad nuovo array dei numeri utente 
-    //  * controlliamo la lunghezza dell'array dell'utente e scriviamo quanti ne ha indovinati
-    //  * 
+
+    let numeriUtente = [];
+
+    for (let i = 0; i < 5; i++){
+        numeroScelto = parseInt(prompt("che numero ti ricordi?"))
+
+        if (numbersToGuess.includes(numeroScelto)){
+            numeriUtente.push(numeroScelto);
+        }
+    }
+
+    console.log("hai indovinato questi numeri " + numeriUtente + " it tuo punteggio è di " + numeriUtente.length + " su 5");
+
 }, 3000)
 
