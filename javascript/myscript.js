@@ -1,26 +1,37 @@
 
 
-let secretNumbers = [];
-
 function randomNumbers(min,max){
     min = Math.ceil(min);
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min) + min);
 }
 
-function isFillNumbers(totNumbers){ 
+function getCasualArray(length){ 
 
-    for (let i = 0; i < 5; i++){
+    let numbersToGuess = [];
+
+    for (let i = 0; i < length; i++){
 
         numeroCorrente = randomNumbers(1, 100);
 
-        totNumbers.push(numeroCorrente)
+        numbersToGuess.push(numeroCorrente)
     }
+
+    return numbersToGuess
 }
 
-document.getElementById("indovina").innerHTML = secretNumbers;
+
+let numbersToGuess = getCasualArray(5)
 
 
-isFillNumbers(secretNumbers)
+alert(numbersToGuess);
 
-console.log(secretNumbers);
+setTimeout(function(){
+    alert("ciao")
+    //*chiedere 5 volte il numero all utente
+    //  * per ogni numero controlla se presente tra i numeri casuali (array numbersToGuess)
+    //  * se contenuto aggiungiamo ad nuovo array dei numeri utente 
+    //  * controlliamo la lunghezza dell'array dell'utente e scriviamo quanti ne ha indovinati
+    //  * 
+}, 3000)
+
