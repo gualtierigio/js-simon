@@ -8,9 +8,19 @@ function randomNumbers(min,max){
     return Math.floor(Math.random() * (max - min) + min);
 }
 
-function isFillNumbers(totNumbers){
+function isFillNumbers(totNumbers){ 
 
     for (let i = 0; i < 5; i++){
-        totNumbers.push(randomNumbers(1, 5))
+
+        numeroCorrente = randomNumbers(1, 100);
+
+        totNumbers.push(numeroCorrente)
     }
 }
+
+document.getElementById("indovina").innerHTML = secretNumbers;
+
+
+isFillNumbers(secretNumbers)
+
+console.log(secretNumbers);
