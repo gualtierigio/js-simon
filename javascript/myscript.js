@@ -23,7 +23,6 @@ function getCasualArray(length){
 
 let numbersToGuess = getCasualArray(5)
 
-
 alert(numbersToGuess);
 
 setTimeout(function(){
