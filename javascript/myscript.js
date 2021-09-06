@@ -10,11 +10,19 @@ function getCasualArray(length){
 
     let numbersToGuess = [];
 
-    for (let i = 0; i < length; i++){
+    let i = 0;
 
-        numeroCorrente = randomNumbers(1, 100);
+    while (i < length) {
 
-        numbersToGuess.push(numeroCorrente)
+        numeroCorrente = randomNumbers(1, 101);
+
+        if (numbersToGuess.includes(numeroCorrente)){
+            i < length;
+        }
+        else{
+            numbersToGuess.push(numeroCorrente);
+            i++;
+        }
     }
 
     return numbersToGuess
