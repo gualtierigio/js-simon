@@ -37,12 +37,19 @@ setTimeout(function(){
 
     let numeriUtente = [];
 
-    for (let i = 0; i < 5; i++){
-        numeroScelto = parseInt(prompt("che numero ti ricordi?"))
+    let j = 0;
 
-        if (numbersToGuess.includes(numeroScelto)){
+    while (j < 5){
+
+        numeroScelto = parseInt(prompt("che numeri ti ricordi?"))
+
+        if (numbersToGuess.includes(numeroScelto) && !numeriUtente.includes(numeroScelto)){
             numeriUtente.push(numeroScelto);
+            
+        }else if (numeriUtente.includes(numeroScelto)) {
+            alert("hai già scelto questo numero riprova..")
         }
+        j++
     }
 
     console.log("hai indovinato questi numeri " + numeriUtente + " it tuo punteggio è di " + numeriUtente.length + " su 5");
